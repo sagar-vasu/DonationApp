@@ -9,7 +9,6 @@ const cashData = (obj) => {
                 dispatch({ type: 'RESET', payload: '' })
             }, 3000);
         }).catch(err => {
-            alert("erowerioid")
             dispatch({ type: 'ERR', payload: err.message })
         })
     }
@@ -75,9 +74,9 @@ const goodsData = (obj) => {
 }
 
 
-const contactData = (obj)=>{
+const contactData = (obj) => {
 
-        delete obj.warning
+    delete obj.warning
     return dispatch => {
         firebase.firestore().collection('contacts').add(obj).then(() => {
             dispatch({ type: 'CONTACT_DATA_ADD_SUCCESS', payload: 'Thanks For Contact us' })

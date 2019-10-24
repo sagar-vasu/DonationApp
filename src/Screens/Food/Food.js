@@ -110,7 +110,7 @@ class FoodDonation extends React.Component {
                                 {this.state.warning}
                             </Text>
                             <Text style={{ color: 'red', alignSelf: 'center' }}>
-                                {this.state.err}
+                            {this.props.err}
                             </Text>
                             <View style={styles.btn}>
                                 <Btn title='Donate Now' onPress={() => this.submitData(this.state)} />

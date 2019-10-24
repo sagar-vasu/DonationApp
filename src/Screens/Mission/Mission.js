@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, StyleSheet, Platform, SafeAreaView, StatusBar, Image, WebView } from 'react-native'
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, CardItem, Card } from 'native-base';
+import { View, StyleSheet, Platform, SafeAreaView,Image, StatusBar, } from 'react-native'
+import { Container, Header,  Content,  Body,  Text, CardItem, Card } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
 export default class Mission extends React.Component {
@@ -22,9 +22,13 @@ export default class Mission extends React.Component {
         return (
             <SafeAreaView style={styles.safeView}>
                 <Container>
-                    <Header style={{backgroundColor: '#056839'}}>
-                    <Body style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-                            <Title style={{ alignSelf: 'center' }}>Mission</Title>
+                    <Header style={{ backgroundColor: 'white' }}>
+                        <Body style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <Image
+                                source={require('../../../assets/splash.png')}
+                                style={{ width: 100, height: 50 }}
+                            >
+                            </Image>                        
                         </Body>
                     </Header>
                     <Content>

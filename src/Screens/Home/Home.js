@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, StyleSheet, Platform, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Card, Icon } from 'native-base';
+import { View, StyleSheet, Platform, SafeAreaView, StatusBar, TouchableOpacity, Image } from 'react-native'
+import { Container, Header, Title, Content, Body, Text } from 'native-base';
 import { Slider } from '../../Components'
 import { Ionicons } from '@expo/vector-icons';
 import _ from 'lodash';
@@ -25,9 +25,13 @@ export default class Home extends React.Component {
         return (
             <SafeAreaView style={styles.safeView}>
                 <Container>
-                    <Header style={{ backgroundColor: '#056839' }} >
+                    <Header style={{ backgroundColor: 'white' }} >
                         <Body style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                            <Title style={{ alignSelf: 'center' }}>Home</Title>
+                            <Image
+                                source={require('../../../assets/splash.png')}
+                                style={{ width: 100, height: 50 }}
+                            >
+                            </Image>
                         </Body>
                     </Header>
                     <Content>

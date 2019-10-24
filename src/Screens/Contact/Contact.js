@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, StyleSheet, Platform, SafeAreaView, StatusBar, KeyboardAvoidingView, ScrollView, TextInput } from 'react-native'
-import { Container, Header, Title, Content, Right, Body, Text, } from 'native-base';
+import { View, StyleSheet, Platform, SafeAreaView, StatusBar, KeyboardAvoidingView, ScrollView, TextInput,Image } from 'react-native'
+import { Container, Header,  Content, Right, Body, Text, } from 'native-base';
 import { Input, Btn } from '../../Components'
 import { contactData } from '../../Store/Action'
 import { connect } from 'react-redux'
@@ -50,13 +50,17 @@ class Contact extends React.Component {
         return (
             <SafeAreaView style={styles.safeView}>
                 <Container>
-                    <Header style={{ backgroundColor: '#056839' }}>
+                    <Header style={{ backgroundColor: '#white' }}>
                         <Body style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                            <Title style={{ alignSelf: 'center' }}>Contact Us</Title>
-                        </Body>
+                            <Image
+                                source={require('../../../assets/splash.png')}
+                                style={{ width: 100, height: 50 }}
+                            >
+                            </Image>
+                            </Body>
                     </Header>
                     <Content>
-                        <View >
+                        <View style={{marginTop:50}} >
                             <View style={{ flex: 1 }}>
 
                                 <KeyboardAvoidingView
@@ -97,7 +101,7 @@ class Contact extends React.Component {
                                             {this.state.warning}
                                         </Text>
                                         <Text style={{ color: 'red', alignSelf: 'center' }}>
-                                            {this.state.err}
+                                            {this.props.err}
                                         </Text>
                                         <View style={{ marginBottom: 30 }}>
                                             <Btn style={{ backgroundColor: '#056839' }} title='Send Now' onPress={() => this.submitData(this.state)} />
@@ -110,7 +114,7 @@ class Contact extends React.Component {
 
 
                             <View style={{
-                                flex: 1, alignItems: 'center', justifyContent: 'center',
+                                flex: 1, alignItems: 'center', justifyContent: 'center',marginBottom:20
                             }}>
                                 <Text style={{ alignSelf: 'auto' }}>Phone Number</Text>
                                 <Text style={{ alignSelf: 'auto' }}>111-729-526</Text>
